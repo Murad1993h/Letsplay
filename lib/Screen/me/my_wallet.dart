@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:letsplay/Screen/me/transaction_history.dart';
+import 'package:letsplay/Screen/me/transfare_blance.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -657,6 +658,113 @@ class _my_walletState extends State<my_wallet> {
                               )
                             ],
                           ),
+                          Divider(
+                            color: Colors.black,
+                          ),
+
+
+
+
+
+
+
+
+                      //TO DO Transfer
+
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          FaIcon(
+                                            FontAwesomeIcons.moneyBill,
+                                            color: Colors.blue,
+                                          ),
+                                          Text(" Wining To Total Blance",
+                                              style: GoogleFonts.lato(
+                                                  color: Colors.grey,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontSize: 12)),
+                                          // Icon(
+                                          //   Icons.info,
+                                          //   color: Colors.grey,
+                                          // ),
+                                        ],
+                                      ),
+                                      // Row(
+                                      //   children: [
+                                      //     Image.asset(
+                                      //       'Images/t.png',
+                                      //       height: 30,
+                                      //       width: 30,
+                                      //     ),
+                                      //     Text(
+                                      //         deposite_earn != null
+                                      //             ? " " +
+                                      //                 deposite_earn.toString()
+                                      //             : "...",
+                                      //         style: GoogleFonts.lato(
+                                      //             color: Colors.black,
+                                      //             fontWeight: FontWeight.w700,
+                                      //             fontSize: 18)),
+                                      //   ],
+                                      // ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (_) => TransfareBlance()));
+                                  },
+                                  child: Container(
+                                    height: height / 20,
+                                    width: width / 2.5,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: Colors.blue),
+                                    child: Row(
+                                      children: [
+                                        IconButton(
+                                          icon: Icon(
+                                            Icons.send,
+                                            color: Colors.white,
+                                          ), onPressed: () {  },
+                                        ),
+                                        Text(
+                                          "Transfar",
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+
+
+
+
+
+
+
+
                           Divider(
                             color: Colors.black,
                           ),
